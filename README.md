@@ -1,4 +1,4 @@
-# Windows 11 Rice - Academical's Prefence
+# Windows 11 Rice - Academical's Preference
 This Repository contains config files, instructions and whatnot to set a experience similar to Linux with Third Party Software such as GlazeWM, Windhawk, YASB & More. 
 
 ## Side Note
