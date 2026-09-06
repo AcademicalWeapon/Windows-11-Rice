@@ -2,7 +2,7 @@
 This Repository contains config files, instructions and whatnot to set a experience similar to Linux with Third Party Software such as GlazeWM, Windhawk, YASB & More. 
 
 ## Side Note
-Most of my configuration is from the YouTuber [SleepyChatHey](https://www.youtube.com/@SleepyCatHey). I just needed a place to store my configuraton somewhere I can access incase I download Windows 11 on another Device, or reinstall it. The Configuration Files are set to my Preference so feel free to change the config to your liking once you've cloned this repo.
+Most of my configuration is from the YouTuber [SleepyCatHey](https://www.youtube.com/@SleepyCatHey). I just needed a place to store my configuraton somewhere I can access incase I download Windows 11 on another Device, or reinstall it. The Configuration Files are set to my Preference so feel free to change the config to your liking once you've cloned this repo.
 
 ## What I am aiming for
 I recently tried CachyOS (w/ Hyprland and Plasma) in an attempt to ditch Windows 11. It was fun, and I really enjoyed the OS, however it just didn't work for me since RDP and certain Programs did not work properly without some issues appearing. So In an attempt to mirror my CachyOS experience on Windows 11, I downloaded these Programs to mimic Hyprland as close as possible.
