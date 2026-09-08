@@ -2,8 +2,6 @@
 # For more information, visit https://github.com/glzr-io/glazewm
 # ? For better commends, download https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
 
-# * === Academical's Preferred Configuration for GlazeWM, stored in Github as Backup. Do not Change === *
-
 general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
@@ -117,7 +115,7 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      shown_on_top: false
+      shown_on_top: true # ? Necessary so that [focus_follows_cursor] works properly and doesn't hide the floating windows behind the tiled ones.
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
@@ -125,7 +123,7 @@ window_behavior:
       maximized: false
 
       # Whether to show fullscreen windows as always on top.
-      shown_on_top: false
+      shown_on_top: true
 
 workspaces:
   - name: "1"
@@ -140,7 +138,7 @@ workspaces:
   # ? Additional Special Workspace, similar to Hyprland's Scratchpad [Meta] + [S]
   - name: "S"
     display_name: "Scratchpad"
-    keep_alive: true # ? Optional: Show the Workspace in the Bar even if nothing is in there.
+    keep_alive: true
 
 window_rules:
   - commands: ["ignore"]
@@ -184,24 +182,26 @@ binding_modes:
 
 keybindings:
   # Shift focus in a given direction.
-  - commands: ["focus --direction left"]
-    bindings: ["alt+h", "alt+left"]
-  - commands: ["focus --direction right"]
-    bindings: ["alt+l", "alt+right"]
-  - commands: ["focus --direction up"]
-    bindings: ["alt+k", "alt+up"]
-  - commands: ["focus --direction down"]
-    bindings: ["alt+j", "alt+down"]
+  # ! Disabled (Own Preference)
+  # - commands: ["focus --direction left"]
+  #   bindings: ["alt+h", "alt+left"]
+  # - commands: ["focus --direction right"]
+  #   bindings: ["alt+l", "alt+right"]
+  # - commands: ["focus --direction up"]
+  #   bindings: ["alt+k", "alt+up"]
+  # - commands: ["focus --direction down"]
+  #   bindings: ["alt+j", "alt+down"]
 
-  # Move focused window in a given direction.
-  - commands: ["move --direction left"]
-    bindings: ["alt+shift+h", "alt+shift+left"]
-  - commands: ["move --direction right"]
-    bindings: ["alt+shift+l", "alt+shift+right"]
-  - commands: ["move --direction up"]
-    bindings: ["alt+shift+k", "alt+shift+up"]
-  - commands: ["move --direction down"]
-    bindings: ["alt+shift+j", "alt+shift+down"]
+  # # Move focused window in a given direction.
+  # ! Disabled (Own Preference)
+  # - commands: ["move --direction left"]
+  #   bindings: ["alt+shift+h", "alt+shift+left"]
+  # - commands: ["move --direction right"]
+  #   bindings: ["alt+shift+l", "alt+shift+right"]
+  # - commands: ["move --direction up"]
+  #   bindings: ["alt+shift+k", "alt+shift+up"]
+  # - commands: ["move --direction down"]
+  #   bindings: ["alt+shift+j", "alt+shift+down"]
 
   # Resize focused window by a percentage or pixel amount.
   # ! Disabled (Own Preference)
@@ -217,8 +217,9 @@ keybindings:
   # As an alternative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
   # the name 'resize'.
-  - commands: ["wm-enable-binding-mode --name resize"]
-    bindings: ["alt+r"]
+  # ! Disabled (Own Preference)
+  # - commands: ["wm-enable-binding-mode --name resize"]
+  #   bindings: ["alt+r"]
 
   # Disables window management and all other keybindings until alt+e # ? Changed to [alt] + [e]
   # is pressed again.
@@ -241,21 +242,23 @@ keybindings:
     bindings: ["alt+shift+space"]
 
   # Change the focused window to be tiling.
-  # ! Disabled (Own Preference)
-  # - commands: ["toggle-tiling"]
-  #   bindings: ["alt+t"]
+  - commands: ["toggle-tiling"]
+    bindings: ["alt+t"]
 
   # # Change the focused window to be fullscreen.
+  # ! Disabled as [F11] does this already
   # - commands: ["toggle-fullscreen"]
   #   bindings: ["alt+f"]
 
   # # Minimize focused window.
+  # ! Disabled as [Win] + [D] or Minimize Button do this already
   # - commands: ["toggle-minimized"]
   #   bindings: ["alt+m"]
 
   # # Close focused window.
-  # - commands: ["close"]
-  #   bindings: ["alt+shift+q"]
+  # ? Changed to [alt] + [q]
+  - commands: ["close"]
+    bindings: ["alt+shift+q"]
 
   # Kill GlazeWM process safely.
   - commands: ["wm-exit"]
