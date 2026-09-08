@@ -10,4 +10,7 @@ if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
     fastfetch 
 }
 
-oh-my-posh init pwsh --config ~/.config/omp/m365.omp.json | Invoke-Expression
+# Needed when launching the Terminal from PowerToys [Win] + [T]
+$Host.UI.RawUI.WindowTitle = 'Windows PowerShell'
+# Make sure to set the Path Correctly
+oh-my-posh init pwsh --config ~/.config/omp/config.json | Invoke-Expression
