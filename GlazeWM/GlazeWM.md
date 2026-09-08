@@ -1,6 +1,6 @@
 # GlazeWM Configuration
 
-This is a modified version of GlazeWM's Standard Configuration. This Markdown File explains what was modified. Not all Settings and Widgets have been reviewed, so I might be missing a few tweaks that could better the Hyprland Experience on Windows, so If you see a setting unchanged/done wrong, please modify the `config.yaml` file and add the changes here.
+This is a modified version of GlazeWM's Standard Configuration. This Markdown File explains what was modified. Not all Settings have been reviewed, so I might be missing a few tweaks that could better the Hyprland Experience on Windows, so If you see a setting unchanged/done wrong, please modify the `config.yaml` file and add the changes here.
 
 ## Scratchpad & Workspace Focus
 
@@ -16,7 +16,9 @@ By Default, when pressing [Alt] + [Enter], GlazeWM will launch an Instance of th
 In Windows 11, to change focus of an Program, you need to click on the Window. In Hyprland, the Window Focus changes immediately on where your Mouse Hovers. This can be done here on Windows aswell by setting `focus_follows_cursor` to `true`.
 
 ## Gaps
+
 Default: 20px
+
 - Inner Gap: 10px
 - Outer Gap: 5px
 
