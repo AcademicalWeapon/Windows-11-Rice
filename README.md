@@ -59,7 +59,7 @@ I haven't tried the more modern PowerShells yet, since I don't want two differen
 
 ### Oh my Posh / Starship
 
-Instead of the Boring `PS C:\Windows\system32>`, OMP/Starship add themes/Presets to the Command line. These are highly customizeable and look amazing. My Favourite one is M365Princess (modified to the Transgender Colours). Make sure to Install
+Instead of the Boring `PS C:\Windows\system32>`, OMP/Starship add themes/Presets to the Command line. These are highly customizeable and look amazing. My Favourite one is M365Princess (modified to the Transgender Colours).
 
 - https://ohmyposh.dev/docs/themes/
 - https://starship.rs/presets/
