@@ -5,18 +5,18 @@
 general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
-  # ? Zebar or YASB can be added here or be started via Taskmanager Autostart
+  # * Zebar or YASB can be added here or be started via Taskmanager Autostart
   startup_commands: []
 
   # Commands to run just before the WM is shutdown.
-  # ? Zebar or YASB can be added here
+  # * Zebar or YASB can be added here
   shutdown_commands: []
 
   # Commands to run after the WM config is reloaded.
   config_reload_commands: []
 
   # Whether to automatically focus windows underneath the cursor.
-  # ? Mimics Hyprland's Window Focusing Behaviour
+  # * Mimics Hyprland's Window Focusing Behaviour
   # ? Set to [false] if you want to keep it similar to Windows 11
   focus_follows_cursor: true
 
@@ -43,10 +43,11 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  # ? Hyprland has this behaviour by Default, but you can keep set to [false] to sort each apps in Individual Workspaces
+  # * Hyprland has this behaviour by Default
+  # ? You can keep set to [false] to sort each apps in Individual Workspaces
   show_all_in_taskbar: true
 
-gaps: # ? Preference of @academicalweapon, modify to your own liking
+gaps:
   # Whether to scale the gaps with the DPI of the monitor.
   scale_with_dpi: true
 
@@ -116,8 +117,8 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      # ? Important for [focus_follows_cursor] to work properly. Otherwise Floating Windows will be hidden behind tiled Windows
-      shown_on_top: true #
+      # * Important for [focus_follows_cursor] to work properly. Otherwise Floating Windows will be hidden behind tiled Windows
+      shown_on_top: true
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
@@ -125,7 +126,7 @@ window_behavior:
       maximized: false
 
       # Whether to show fullscreen windows as always on top.
-      # ? Must be set to [true], otherwise Floating Windows will be on top of Full Screen Apps
+      # * Must be set to [true], otherwise Floating Windows will be on top of Full Screen Apps
       shown_on_top: true
 
 workspaces:
@@ -138,10 +139,10 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
-  # ? Additional Special Workspace, similar to Hyprland's Scratchpad [Meta] + [S]
+  # * Additional Special Workspace, similar to Hyprland's Scratchpad [Meta] + [S]
   - name: "S"
     display_name: "Scratchpad"
-    keep_alive: false # ? (Optional) Show the Workspace in the Status Bar even if nothing is in there.
+    # Keep Alive was removed since it's a buggy
 
 window_rules:
   - commands: ["ignore"]
@@ -222,14 +223,14 @@ keybindings:
 
   # Disables window management and all other keybindings until alt+shift+p
   # is pressed again.
-  # ? My Preferred Way is [Alt] + [E] and outright removing the wm-exit Keybind.
+  # * My Preferred Way is [Alt] + [E] and outright removing the wm-exit Keybind.
   - commands: ["wm-toggle-pause"]
     bindings: ["alt+shift+p"]
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
-  # ? Hyprland does this automatically by default. GlazeWM is currently working on this
-  # ? https://github.com/glzr-io/glazewm/issues/678
+  # * Hyprland does this automatically by default. GlazeWM is currently working on this
+  # * https://github.com/glzr-io/glazewm/issues/678
   - commands: ["toggle-tiling-direction"]
     bindings: ["alt+v"]
 
@@ -247,7 +248,7 @@ keybindings:
     bindings: ["alt+t"]
 
   # Change the focused window to be fullscreen.
-  # ? [F11] does this already
+  # * [F11] does this already
   - commands: ["toggle-fullscreen"]
     bindings: ["alt+f"]
 
@@ -256,12 +257,12 @@ keybindings:
     bindings: ["alt+m"]
 
   # Close focused window.
-  # ? [Alt] + [F4] does this already
+  # * [Alt] + [F4] does this already
   - commands: ["close"]
     bindings: ["alt+q"]
 
   # Kill GlazeWM process safely.
-  # ? Real Glazers never quit /j
+  # real glazers never quit /j
   - commands: ["wm-exit"]
     bindings: ["alt+shift+e"]
 
@@ -313,7 +314,7 @@ keybindings:
     bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9"]
-  # ? Special Scratchpad Workspace
+  # * Special Scratchpad Workspace
   - commands: ["focus --workspace S"]
     bindings: ["alt+s"]
 
@@ -331,8 +332,8 @@ keybindings:
   #   bindings: ['alt+shift+s']
 
   # Move focused window to a workspace defined in `workspaces` config.
-  # ? Unlike Hyprland, GlazeWM also switches you to the Workspace that you want to
-  # ? move the program to. This has been removed, but can be readded with [,"focus --workspace 1"]
+  # * Unlike Hyprland, GlazeWM also switches you to the Workspace that you want to move the program to.
+  # ? This has been removed, but can be readded with [,"focus --workspace 1"]
   # - commands: ["move --workspace 1", "focus --workspace 1"]
   #   bindings: ["alt+shift+1"]
   - commands: ["move --workspace 1"]
@@ -353,6 +354,6 @@ keybindings:
     bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9"]
     bindings: ["alt+shift+9"]
-  # ? Special Scratchpad Workspace
+  # * Special Scratchpad Workspace
   - commands: ["move --workspace S"]
     bindings: ["alt+shift+s"]
