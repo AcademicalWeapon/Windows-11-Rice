@@ -5,7 +5,7 @@
 general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
-  # * Zebar or YASB can be added here or be started via Taskmanager Autostart
+  # * Zebar can be added here or be started via Taskmanager Autostart
   startup_commands: []
 
   # Commands to run just before the WM is shutdown.
@@ -13,6 +13,7 @@ general:
   shutdown_commands: []
 
   # Commands to run after the WM config is reloaded.
+  # * Zebar or YASB can be added here
   config_reload_commands: []
 
   # Whether to automatically focus windows underneath the cursor.
@@ -168,6 +169,8 @@ window_rules:
       - window_process: { equals: "POWERPNT" }
         window_class: { not_regex: "PPTFrameClass" }
 
+      # * If there are other Programs/Windows that are supposed to be ignored, but aren't being ignored, make sure to add them here.
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
@@ -221,12 +224,6 @@ keybindings:
   - commands: ["wm-enable-binding-mode --name resize"]
     bindings: ["alt+r"]
 
-  # Disables window management and all other keybindings until alt+shift+p
-  # is pressed again.
-  # * My Preferred Way is [Alt] + [E] and outright removing the wm-exit Keybind.
-  - commands: ["wm-toggle-pause"]
-    bindings: ["alt+shift+p"]
-
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
   # * Hyprland does this automatically by default. GlazeWM is currently working on this
@@ -260,6 +257,12 @@ keybindings:
   # * [Alt] + [F4] does this already
   - commands: ["close"]
     bindings: ["alt+q"]
+
+  # Disables window management and all other keybindings until alt+shift+p
+  # is pressed again.
+  # * My Preferred Way is [Alt] + [E] and outright removing the wm-exit Keybind.
+  - commands: ["wm-toggle-pause"]
+    bindings: ["alt+shift+p"]
 
   # Kill GlazeWM process safely.
   # real glazers never quit /j

@@ -93,7 +93,7 @@ widgets:
         orientation: "portrait"
         image_corner_radius: 0
       keybindings:
-        - keys: alt+u
+        - keys: alt+w # ? Change to your preferred Keybind.
           action: toggle_gallery
           screen: cursor
   clock:
