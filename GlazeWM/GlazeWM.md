@@ -9,7 +9,7 @@ So, these Features were commented out and were replaced with changing and moving
 
 ## Additional Shortcuts
 
-By Default, when pressing [Alt] + [Enter], GlazeWM will launch an Instance of the Terminal (Powershell), **anywhere in the system**. This is Problematic when trying to open the Properties within File Explorer by using that exact shortcut. This Feature was commented out, but can be remapped to [Alt]/[Windows] + [T], similar to Hyprland's way to launch an Terminal Instance, but it's better if it's done via PowerToys Instead. The Change Focus Keybind [Alt] + [Space] was commented out as well since PowerToy Run and YASB's Quick Run use this keybind.
+By Default, when pressing [Alt] + [Enter], GlazeWM will launch an Instance of the Terminal (Powershell), **anywhere in the system**. This is Problematic when trying to open the Properties within File Explorer by using that exact shortcut. This Feature was commented out, but can be remapped to [Alt]/[Windows] + [T], similar to Hyprland's way to launch an Terminal Instance, but it's better if it's done via PowerToys Instead. The Change Focus Keybind [Alt] + [Space] was commented out as well since PowerToy Run (and YASB's Quick Run) use this keybind.
 
 ## Mouse Focus
 
